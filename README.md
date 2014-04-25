@@ -20,7 +20,7 @@ FILE=id3raw.txt
 ROUND=0  
 
 Your can run V2,by commadn below:  
-  hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-streaming-1.2.1.jar  \  
+  hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-  streaming-1.2.1.jar  \  
    -input id3raw.txt  \  
    -output  id3_out \  
    -mapper ./aa026_m.o \  
@@ -31,4 +31,16 @@ Your can run V2,by commadn below:
    
 So,I hope you will enjoy them and give more suggestions~~ ^_^  
 
-
+2,CF    
+======    
+Your can run V2,by commadn below:  
+  hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-  streaming-1.2.1.jar  \    
+   -input cfraw.txt  \    
+   -output  id3_out \    
+   -mapper ./aa035_m.o \    
+   -reducer ./aa035_r.o  \    
+   -file ./aa035_m.o -file ./aa035_r.o ./cfcfg.txt \    
+   -jobconf mapred.reduce.tasks=1 \    
+   -jobconf mapre.job.name="aaa" \    
+    
+So,I hope you will enjoy them and give more suggestions~~ ^_^   
