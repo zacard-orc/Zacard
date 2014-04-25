@@ -31,7 +31,7 @@ Your can run V2,by commadn below:
    
 So,I hope you will enjoy them and give more suggestions~~ ^_^  
 
-2,CF    
+2,CF      
 ======    
 Your can run V2,by commadn below:  
   hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-  streaming-1.2.1.jar  \    
