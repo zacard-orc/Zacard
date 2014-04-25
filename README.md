@@ -58,3 +58,39 @@ A tool for export the ddl of oracle table to mysql db
 
 
 This script is only for normal table,normal index and PrimayKey.The Job for support Partition table is also in develop.  
+
+4,Apriori  
+=======  
+A Apriori algorithm based on MapReduceV1 and alone  
+
+How to Use
+1,New a sample text file just like 'ap001.txt'.  
+2,g++ ap001.cc -o ap001.o  
+
+Sample Result  
+
+-----扫描记录集-----                  
+1 3 4 |1 2 3 |2                      
+2 3 5 |1 2 3 |2                      
+1 2 3 5 |1 2 3 |3                    
+2 5 |1 2 3 |1                        
+-->1                                 
+1 3 4 |1 2 3 5 |2                    
+2 3 5 |1 2 3 5 |3                    
+1 2 3 5 |1 2 3 5 |4                  
+2 5 |1 2 3 5 |2                      
+-->1                                 
+1 3 4 |1 3 5 |2                      
+2 3 5 |1 3 5 |2                      
+1 2 3 5 |1 3 5 |3                    
+2 5 |1 3 5 |1                        
+-->1                                 
+1 3 4 |2 3 5 |1                      
+2 3 5 |2 3 5 |3                      
+1 2 3 5 |2 3 5 |3                    
+2 5 |2 3 5 |2                        
+-->2                                 
+有效支持元素:                        
+2,3,5,|2                             
+有效支持元素 ---> C组合[频繁项]:     
+
