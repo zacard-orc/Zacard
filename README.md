@@ -94,3 +94,18 @@ Sample Result
 2,3,5,|2                             
 有效支持元素 ---> C组合[频繁项]:     
 
+5,K-Means
+=======  
+A K-Means Sample With Single Edition &amp; MapReduce Edition Written in C++  
+
+Your can run V2,by commadn below:  
+  hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-  streaming-1.2.1.jar  \    
+   -input kmdata.txt  \    
+   -output  id3_out \    
+   -mapper ./aa041_m.o \    
+   -reducer ./aa041_r.o  \    
+   -file ./aa041_m.o -file ./aa041_r.o  \    
+   -jobconf mapred.reduce.tasks=1 \    
+   -jobconf mapre.job.name="aaa" \    
+    
+So,I hope you will enjoy them and give more suggestions~~ ^_^
